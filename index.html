@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="description" content="My first webpage, with image">
+      <meta name="keywords" content="mths, website">
+      <meta name="author" content="Hayden Bronson">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Another Webpage</title>
+    </head>
+    <body>
+      <p ="Question">Enter your age to find wh5at rating of movies you can watch.</p>
+  <label for="Textbox">Age:</label>
+  <input type="text" id="age" name="age" ><br><br>
+    <input type="button" value="Check Ratings" onclick="check_age()">
+  <p id="answer" hidden>Answer to question</p>    
+  <script>
+  function check_age() {  
+    let age;
+     let answer;
+  
+    age  = parseInt(document.getElementById("age").value);
+          console.log(age);
+
+    answer  = document.getElementById("answer");
+          console.log(answer);          
+ 
+     if(age > 17) {
+      answer.innerHTML = "You can see an R movie alone.";
+      answer.style.display = "block";
+      console.log(answer.innerHTML);
+       console.log ("You can see an R movie alone.");
+       
+     } else if(age > 13) {
+      answer.innerHTML = "You can see a PG-13 movie alone.";
+      answer.style.display = "block";
+      console.log(answer.innerHTML);
+       console.log ("You can see a PG-13 movie alone.");
+       
+     } else if(age> 5) {
+ answer.innerHTML = "You can see a G or PG movie alone.";
+      answer.style.display = "block";
+      console.log(answer.innerHTML);
+       console.log ("You can see a G or PG movie alone.");
+       
+     } else {
+ answer.innerHTML = "You're too young to see most movies.";
+      answer.style.display = "block";
+      console.log(answer.innerHTML);
+       console.log ("You're too young to see most movies.");
+       
+     }
+       alert("Thanks for using.");
+  }
+  </script>
+    </body>
+</html>
